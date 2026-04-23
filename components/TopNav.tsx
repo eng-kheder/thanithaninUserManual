@@ -23,7 +23,7 @@ export default function TopNav() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-ink-100 bg-white/90 backdrop-blur no-print">
-        <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <button
               aria-label="القائمة"
@@ -35,12 +35,12 @@ export default function TopNav() {
 
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/brand/logo-full-color-ar.png"
+                src="/brand/7-07.png"
                 alt="ثاني اثنين"
-                width={120}
-                height={32}
+                width={240}
+                height={80}
                 priority
-                className="h-8 w-auto object-contain"
+                className="h-14 w-auto object-contain sm:h-16"
               />
             </Link>
           </div>
@@ -59,13 +59,13 @@ export default function TopNav() {
             onClick={() => setOpen(false)}
           />
           <div className="absolute inset-y-0 end-0 flex w-[86%] max-w-sm flex-col bg-white shadow-xl">
-            <div className="flex h-14 items-center justify-between border-b border-ink-100 px-4">
+            <div className="flex h-20 items-center justify-between border-b border-ink-100 px-4">
               <Image
-                src="/brand/logo-full-color-ar.png"
+                src="/brand/7-07.png"
                 alt="ثاني اثنين"
-                width={110}
-                height={28}
-                className="h-7 w-auto object-contain"
+                width={200}
+                height={72}
+                className="h-12 w-auto object-contain"
               />
               <button
                 aria-label="إغلاق"
