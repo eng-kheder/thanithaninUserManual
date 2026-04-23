@@ -116,6 +116,17 @@ export const navGroups: NavGroup[] = [
       },
     ],
   },
+  {
+    title: "ما الذي يأتي قريباً؟",
+    items: [
+      {
+        slug: "roadmap",
+        title: "الميزات المستقبلية",
+        href: "/roadmap/",
+        description: "نقاط الولاء، تحليل الموردين، توريد تفضيلي، سلّة وزد",
+      },
+    ],
+  },
 ];
 
 export const allNavItems: NavItem[] = navGroups.flatMap((g) => g.items);

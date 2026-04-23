@@ -137,6 +137,29 @@ export default function IntegrationsPage() {
         </p>
       </Callout>
 
+      <section className="my-10 rounded-2xl border border-accent-200 bg-accent-50/40 p-6 sm:p-8">
+        <div className="mb-3 flex items-center gap-2">
+          <Link size={18} className="text-accent-600" />
+          <span className="text-xs font-bold uppercase tracking-wider text-accent-700">
+            قريباً
+          </span>
+        </div>
+        <h3 className="mb-3 text-xl font-bold text-brand-600">
+          تكاملات سلّة وزد على الطريق
+        </h3>
+        <p className="max-w-3xl text-[15px] leading-8 text-ink-600">
+          يعمل الفريق على تكامل مباشر مع منصّتَي{" "}
+          <span className="font-semibold text-brand-600">سلّة</span> و{" "}
+          <span className="font-semibold text-brand-600">زد</span> لمزامنة
+          المنتجات، المخزون، الأسعار، والطلبات بين متجرك الإلكتروني ونظام
+          ثاني اثنين. تفاصيل أكثر في صفحة{" "}
+          <a href="/roadmap/" className="font-semibold text-brand-600 underline">
+            الميزات المستقبلية
+          </a>
+          .
+        </p>
+      </section>
+
       <NextPrev slug="integrations" />
     </PageShell>
   );

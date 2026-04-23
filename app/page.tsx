@@ -12,6 +12,7 @@ import {
   BarChart3,
   Link2,
   ArrowLeft,
+  Sparkles,
 } from "lucide-react";
 
 const groupIcons: Record<string, any> = {
@@ -19,6 +20,7 @@ const groupIcons: Record<string, any> = {
   "الجانب المالي": Scale,
   "الإدارة والتنظيم": Users,
   "الامتثال والتقارير": BarChart3,
+  "ما الذي يأتي قريباً؟": Sparkles,
 };
 
 export default function HomePage() {
@@ -40,9 +42,10 @@ export default function HomePage() {
           </span>
         </div>
         <p className="max-w-3xl text-[15px] leading-8 text-ink-600">
-          ثاني اثنين نظام إدارة متكامل صُمّم خصيصاً لإدارة الصيدليات ومشتقاتها
-          (الماركت، المستودعات، نقاط البيع). على عكس الأنظمة التقليدية التي
-          تعامل الدواء كمنتج عادي، يبني ثاني اثنين نفسه حول فكرة{" "}
+          ثاني اثنين نظام إدارة متكامل صُمّم خصيصاً لإدارة الصيدليات وسلسلة
+          الإمداد الدوائي (الموردون، الفروع، المخازن، نقاط البيع). على عكس
+          الأنظمة التقليدية التي تعامل الدواء كمنتج عادي، يبني ثاني اثنين
+          نفسه حول فكرة{" "}
           <span className="font-semibold text-brand-600">
             رقم الدفعة وتاريخ الصلاحية
           </span>{" "}

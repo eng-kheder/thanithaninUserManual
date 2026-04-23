@@ -16,7 +16,7 @@ export default function Sidebar({
       <div className="p-5 lg:p-6">
         {navGroups.map((group) => (
           <div key={group.title} className="mb-6">
-            <div className="mb-2 px-3 text-[11px] font-bold uppercase tracking-wider text-ink-400">
+            <div className="mb-2 px-3 text-[11px] font-extrabold uppercase tracking-wider text-brand-600">
               {group.title}
             </div>
             <ul className="space-y-0.5">
