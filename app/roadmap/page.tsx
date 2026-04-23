@@ -4,11 +4,9 @@ import Callout from "@/components/Callout";
 import FeatureGrid from "@/components/FeatureGrid";
 import NextPrev from "@/components/NextPrev";
 import {
-  Gift,
   Handshake,
   TrendingDown,
   ShoppingBag,
-  Store,
   Sparkles,
   Scale,
   Network,
@@ -17,7 +15,7 @@ import {
 export const metadata = {
   title: "الميزات المستقبلية — دليل ثاني اثنين",
   description:
-    "ما الذي يعمل عليه فريق ثاني اثنين الآن: نقاط الولاء، تحليل ومقارنة الموردين، التوريد التفضيلي عبر شركاء السلسلة، وتكاملات سلّة وزد.",
+    "ما الذي يعمل عليه فريق ثاني اثنين الآن: تحليل ومقارنة الموردين، التوريد التفضيلي عبر شركاء السلسلة، وتكاملات سلّة وزد.",
 };
 
 export default function RoadmapPage() {
@@ -47,33 +45,22 @@ export default function RoadmapPage() {
         </p>
       </section>
 
-      <h2 className="mb-3 mt-8 text-2xl font-bold text-brand-500">
-        1. برنامج نقاط الولاء
-      </h2>
-      <p className="mb-6 max-w-3xl text-[15px] leading-8 text-ink-500">
-        برنامج متكامل لمكافأة العملاء المخلصين: كل عميل يجمع نقاطاً من كل
-        فاتورة، يستبدلها لاحقاً بخصومات أو هدايا. نظام قابل للتخصيص بالكامل
-        حسب الصيدلية: معدّل التحويل، المنتجات المستثناة، شروط الاستبدال،
-        ومدّة صلاحية النقاط.
-      </p>
-      <FeatureGrid
-        cols={2}
-        features={[
-          {
-            icon: Gift,
-            title: "جمع النقاط واستبدالها",
-            body: "كل ريال مبيعات = نقاط. العميل يرى رصيده على الفاتورة، ويمكنه استبدالها في أي زيارة قادمة، بنقرة واحدة على نقطة البيع.",
-          },
-          {
-            icon: Store,
-            title: "حملات ولائية",
-            body: "نقاط مضاعفة على أصناف معيّنة، في أيام محدّدة، أو لفئات عملاء. أدوات تسويقية ذكية مربوطة بالمبيعات مباشرةً.",
-          },
-        ]}
-      />
+      <Callout tone="success" title="نقاط الولاء أصبحت جاهزة!">
+        <p className="mb-0">
+          ما كان ضمن الميزات المستقبلية أصبح متاحاً الآن كموديول مستقلّ. تفاصيل
+          البرنامج، الحملات، التخصيص، والتقارير متوفّرة في صفحة{" "}
+          <a
+            href="/modules/loyalty/"
+            className="font-semibold text-brand-600 underline"
+          >
+            نقاط الولاء
+          </a>
+          .
+        </p>
+      </Callout>
 
       <h2 className="mb-3 mt-12 text-2xl font-bold text-brand-500">
-        2. تحليل ومقارنة الموردين
+        1. تحليل ومقارنة الموردين
       </h2>
       <p className="mb-6 max-w-3xl text-[15px] leading-8 text-ink-500">
         خدمة تحليل تعطي صاحب الصيدلية رؤية أعمق على موردّيه: من الأسرع
@@ -105,7 +92,7 @@ export default function RoadmapPage() {
           </span>
         </div>
         <h2 className="mb-3 text-2xl font-bold text-brand-500">
-          3. التوريد التفضيلي من شركاء ثاني اثنين
+          2. التوريد التفضيلي من شركاء ثاني اثنين
         </h2>
         <p className="mb-5 max-w-3xl text-[15px] leading-8 text-ink-600">
           خدمة ستُطلق قريباً، تضمن لعملاء ثاني اثنين{" "}
@@ -134,7 +121,7 @@ export default function RoadmapPage() {
       </div>
 
       <h2 className="mb-3 mt-12 text-2xl font-bold text-brand-500">
-        4. تكاملات مع منصّات التجارة الإلكترونية
+        3. تكاملات مع منصّات التجارة الإلكترونية
       </h2>
       <p className="mb-6 max-w-3xl text-[15px] leading-8 text-ink-500">
         الصيدلية اليوم ليست مكاناً واحداً. يبيع جزء من عملائك عبر متجر

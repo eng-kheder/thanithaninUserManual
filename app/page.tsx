@@ -19,7 +19,7 @@ const groupIcons: Record<string, any> = {
   "العمليات اليومية": Boxes,
   "الجانب المالي": Scale,
   "الإدارة والتنظيم": Users,
-  "الامتثال والتقارير": BarChart3,
+  "الإضافات والتقارير": BarChart3,
   "ما الذي يأتي قريباً؟": Sparkles,
 };
 

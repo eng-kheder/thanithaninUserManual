@@ -100,13 +100,19 @@ export const navGroups: NavGroup[] = [
     ],
   },
   {
-    title: "الامتثال والتقارير",
+    title: "الإضافات والتقارير",
     items: [
       {
         slug: "integrations",
         title: "التكاملات: زاتكا ورصد",
         href: "/modules/integrations/",
         description: "الفوترة الإلكترونية وتتبع الأدوية",
+      },
+      {
+        slug: "loyalty",
+        title: "نقاط الولاء",
+        href: "/modules/loyalty/",
+        description: "جمع النقاط، استبدالها، وحملات ولائية",
       },
       {
         slug: "reports",
