@@ -9,7 +9,6 @@ import {
   ShoppingBag,
   Sparkles,
   Scale,
-  Network,
 } from "lucide-react";
 
 export const metadata = {
@@ -84,40 +83,20 @@ export default function RoadmapPage() {
         ]}
       />
 
-      <div className="my-12 rounded-2xl border-2 border-brand-500 bg-white p-6 sm:p-8">
+      <div className="my-12 rounded-2xl border border-brand-200 bg-white p-6 sm:p-8">
         <div className="mb-3 flex items-center gap-2">
-          <Handshake size={20} className="text-brand-500" />
+          <Handshake size={18} className="text-brand-500" />
           <span className="text-xs font-bold uppercase tracking-wider text-accent-600">
-            خدمة حصرية قيد الإطلاق
+            قيد التخطيط
           </span>
         </div>
-        <h2 className="mb-3 text-2xl font-bold text-brand-500">
-          2. التوريد التفضيلي من شركاء ثاني اثنين
+        <h2 className="mb-3 text-xl font-bold text-brand-500">
+          2. التوريد التفضيلي
         </h2>
-        <p className="mb-5 max-w-3xl text-[15px] leading-8 text-ink-600">
-          خدمة ستُطلق قريباً، تضمن لعملاء ثاني اثنين{" "}
-          <span className="font-semibold text-brand-600">
-            توريدات بأفضل الأسعار
-          </span>{" "}
-          عبر شبكة من شركاء سلاسل التوريد المتعاقدين مع ثاني اثنين. بدل
-          التفاوض مع كل مورّد على حدة، تستفيد من قوة الشراء الجماعية لكل
-          الصيدليات على المنصّة.
+        <p className="mb-0 max-w-3xl text-[15px] leading-8 text-ink-600">
+          نعمل على إتاحة أسعار توريد أفضل من داخل النظام مباشرةً، لتقليل
+          وقت المقارنة وتبسيط قرار الشراء. تفاصيل أكثر قريباً.
         </p>
-        <FeatureGrid
-          cols={2}
-          features={[
-            {
-              icon: Network,
-              title: "شبكة شركاء معتمدين",
-              body: "ثاني اثنين يتعاقد مع موردّين وشركاء سلاسل إمداد موثوقين، وينقل الأسعار التفضيلية للصيدليات المشتركة مباشرةً.",
-            },
-            {
-              icon: TrendingDown,
-              title: "أسعار أفضل بدون مجهود",
-              body: "بدون مفاوضات، بدون مقارنات يدوية، بدون علاقات شخصية. الأسعار التفضيلية تظهر داخل النظام لحظة إنشاء طلب الشراء.",
-            },
-          ]}
-        />
       </div>
 
       <h2 className="mb-3 mt-12 text-2xl font-bold text-brand-500">
