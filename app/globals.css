@@ -19,6 +19,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark body {
+  background: #0b1322;
+  color: #e2e8f0;
 }
 
 /* Selection */
@@ -26,11 +32,75 @@ body {
   background: rgba(29, 192, 223, 0.2);
   color: #183964;
 }
+html.dark ::selection {
+  background: rgba(29, 192, 223, 0.35);
+  color: #e6f9fc;
+}
 
 /* Scrollbar (subtle) */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-thumb { background: #d5dbe3; border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: #a9b4c2; }
+html.dark ::-webkit-scrollbar-thumb { background: #2a3340; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #3d4857; }
+
+/* =========================================================
+   Dark-mode overrides for utility patterns used across pages.
+   Scoped to html.dark so they only apply when the toggle is on.
+   ========================================================= */
+
+/* surfaces */
+html.dark .bg-white { background-color: #111a2e !important; }
+html.dark .bg-canvas { background-color: #0b1322 !important; }
+html.dark .bg-ink-50 { background-color: #1a2336 !important; }
+html.dark .bg-ink-100 { background-color: #202b42 !important; }
+
+/* brand-50 surfaces (used in hero cards, gradients, callout bg) */
+html.dark .bg-brand-50 { background-color: #17253f !important; }
+html.dark .bg-brand-50\/60 { background-color: rgba(23, 37, 63, 0.6) !important; }
+html.dark .bg-brand-50\/40 { background-color: rgba(23, 37, 63, 0.4) !important; }
+
+/* gradients from brand-50 → white (hero blocks) */
+html.dark .from-brand-50 { --tw-gradient-from: #17253f var(--tw-gradient-from-position) !important; --tw-gradient-to: rgba(23, 37, 63, 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+html.dark .to-white { --tw-gradient-to: #111a2e var(--tw-gradient-to-position) !important; }
+
+/* accent-50 callout/hero backgrounds */
+html.dark .bg-accent-50 { background-color: #0c3644 !important; }
+html.dark .bg-accent-50\/60 { background-color: rgba(12, 54, 68, 0.6) !important; }
+html.dark .bg-accent-50\/50 { background-color: rgba(12, 54, 68, 0.5) !important; }
+html.dark .bg-accent-50\/40 { background-color: rgba(12, 54, 68, 0.4) !important; }
+html.dark .from-accent-50\/50 { --tw-gradient-from: rgba(12, 54, 68, 0.5) var(--tw-gradient-from-position) !important; }
+
+/* tinted table rows */
+html.dark .bg-rose-50\/40 { background-color: rgba(244, 63, 94, 0.12) !important; }
+html.dark .bg-amber-50\/40 { background-color: rgba(245, 158, 11, 0.14) !important; }
+html.dark .bg-amber-50\/20 { background-color: rgba(245, 158, 11, 0.08) !important; }
+html.dark .bg-amber-50 { background-color: rgba(245, 158, 11, 0.12) !important; }
+html.dark .bg-emerald-50 { background-color: rgba(16, 185, 129, 0.12) !important; }
+
+/* borders */
+html.dark .border-ink-100 { border-color: #202b42 !important; }
+html.dark .border-ink-200 { border-color: #2a3650 !important; }
+html.dark .border-brand-100 { border-color: #1f3458 !important; }
+html.dark .border-brand-200 { border-color: #26406b !important; }
+html.dark .border-accent-200 { border-color: #11788d !important; }
+html.dark .border-e.border-ink-100 { border-color: #202b42 !important; }
+
+/* text colors (ink scale inversion) */
+html.dark .text-ink-800 { color: #e2e8f0 !important; }
+html.dark .text-ink-700 { color: #d1d9e3 !important; }
+html.dark .text-ink-600 { color: #b8c1cf !important; }
+html.dark .text-ink-500 { color: #8f9cae !important; }
+html.dark .text-ink-400 { color: #6b7a8e !important; }
+html.dark .text-ink-300 { color: #556273 !important; }
+
+/* brand text (keep readable on dark) */
+html.dark .text-brand-500 { color: #c9d7e6 !important; }
+html.dark .text-brand-600 { color: #94b0c8 !important; }
+
+/* hover for links on dark */
+html.dark .hover\:bg-brand-50:hover { background-color: #1a2942 !important; }
+html.dark .hover\:border-ink-100:hover { border-color: #2a3650 !important; }
 
 @layer components {
   .container-x {

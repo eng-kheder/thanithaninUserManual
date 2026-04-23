@@ -8,7 +8,7 @@ export default function PageShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-white">
       <TopNav />
       <div className="mx-auto flex w-full max-w-7xl gap-8 px-4 sm:px-6 lg:px-8">
-        <aside className="sticky top-20 hidden h-[calc(100vh-5rem)] w-64 shrink-0 border-e border-ink-100 lg:block no-print">
+        <aside className="sticky top-24 hidden h-[calc(100vh-6rem)] w-64 shrink-0 border-e border-ink-100 lg:block no-print dark:border-ink-800">
           <Sidebar />
         </aside>
         <main className="min-w-0 flex-1 py-8 lg:py-10">
