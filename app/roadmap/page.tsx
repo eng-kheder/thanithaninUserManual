@@ -83,24 +83,8 @@ export default function RoadmapPage() {
         ]}
       />
 
-      <div className="my-12 rounded-2xl border border-brand-200 bg-white p-6 sm:p-8">
-        <div className="mb-3 flex items-center gap-2">
-          <Handshake size={18} className="text-brand-500" />
-          <span className="text-xs font-bold uppercase tracking-wider text-accent-600">
-            قيد التخطيط
-          </span>
-        </div>
-        <h2 className="mb-3 text-xl font-bold text-brand-500">
-          2. التوريد التفضيلي
-        </h2>
-        <p className="mb-0 max-w-3xl text-[15px] leading-8 text-ink-600">
-          نعمل على إتاحة أسعار توريد أفضل من داخل النظام مباشرةً، لتقليل
-          وقت المقارنة وتبسيط قرار الشراء. تفاصيل أكثر قريباً.
-        </p>
-      </div>
-
       <h2 className="mb-3 mt-12 text-2xl font-bold text-brand-500">
-        3. تكاملات مع منصّات التجارة الإلكترونية
+        2. تكاملات مع منصّات التجارة الإلكترونية
       </h2>
       <p className="mb-6 max-w-3xl text-[15px] leading-8 text-ink-500">
         الصيدلية اليوم ليست مكاناً واحداً. يبيع جزء من عملائك عبر متجر
@@ -131,6 +115,22 @@ export default function RoadmapPage() {
           إضافية.
         </p>
       </Callout>
+
+      <div className="my-12 rounded-2xl border border-brand-200 bg-white p-6 sm:p-8">
+        <div className="mb-3 flex items-center gap-2">
+          <Handshake size={18} className="text-brand-500" />
+          <span className="text-xs font-bold uppercase tracking-wider text-accent-600">
+            قيد التنسيق
+          </span>
+        </div>
+        <h2 className="mb-3 text-xl font-bold text-brand-500">
+          3. توريدات شركاء ثاني اثنين
+        </h2>
+        <p className="mb-0 max-w-3xl text-[15px] leading-8 text-ink-600">
+          نعمل على إتاحة أسعار توريد أفضل من داخل النظام مباشرةً، لتقليل
+          وقت المقارنة وتبسيط قرار الشراء. تفاصيل أكثر قريباً.
+        </p>
+      </div>
 
       <section className="my-12 rounded-2xl border border-ink-100 bg-canvas p-6 sm:p-8">
         <h3 className="mb-3 text-lg font-bold text-brand-500">
