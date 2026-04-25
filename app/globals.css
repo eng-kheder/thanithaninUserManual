@@ -102,6 +102,9 @@ html.dark .text-brand-600 { color: #94b0c8 !important; }
 html.dark .hover\:bg-brand-50:hover { background-color: #1a2942 !important; }
 html.dark .hover\:border-ink-100:hover { border-color: #2a3650 !important; }
 
+/* sidebar group titles need extra contrast on dark */
+html.dark .sidebar-group-title { color: #88e1ed !important; }
+
 @layer components {
   .container-x {
     @apply mx-auto w-full max-w-5xl px-5 sm:px-6;
