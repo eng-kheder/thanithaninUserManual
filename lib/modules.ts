@@ -35,15 +35,15 @@ export const navGroups: NavGroup[] = [
       },
       {
         slug: "inventory",
-        title: "المخزون والدفعات",
+        title: "المخزون والقطع",
         href: "/modules/inventory/",
-        description: "المستودعات، المنتجات، دفعات الدواء، الصلاحيات",
+        description: "المستودعات، الأصناف، الموديلات، التوافق، والضمان",
       },
       {
         slug: "pos",
         title: "نقطة البيع",
         href: "/modules/pos/",
-        description: "جلسات البيع، الحماية من المنتهي، التحويل التلقائي",
+        description: "جلسات البيع، الباقات، التحقق من الرقم التسلسلي",
       },
     ],
   },
@@ -104,9 +104,9 @@ export const navGroups: NavGroup[] = [
     items: [
       {
         slug: "integrations",
-        title: "التكاملات: زاتكا ورصد",
+        title: "التكاملات: زاتكا",
         href: "/modules/integrations/",
-        description: "الفوترة الإلكترونية وتتبع الأدوية",
+        description: "الفوترة الإلكترونية ووسائل الدفع",
       },
       {
         slug: "loyalty",

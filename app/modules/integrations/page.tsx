@@ -6,18 +6,16 @@ import NextPrev from "@/components/NextPrev";
 import {
   QrCode,
   FileCheck2,
-  ScanBarcode,
   RefreshCw,
-  Link2,
-  ShieldCheck,
   CircleCheck,
-  Link,
+  CreditCard,
+  Link as LinkIcon,
 } from "lucide-react";
 
 export const metadata = {
-  title: "التكاملات: زاتكا ورصد — دليل ثاني اثنين",
+  title: "التكاملات: زاتكا — دليل ثاني اثنين",
   description:
-    "التكامل المباشر مع الفوترة الإلكترونية السعودية (زاتكا) ومنصّة تتبع الأدوية (رصد) من داخل النظام بدون وسطاء.",
+    "التكامل المباشر مع الفوترة الإلكترونية السعودية (زاتكا) من داخل النظام بدون وسطاء، إضافة لمزامنة وسائل الدفع.",
 };
 
 export default function IntegrationsPage() {
@@ -30,8 +28,8 @@ export default function IntegrationsPage() {
           { label: "التكاملات" },
         ]}
         eyebrow="التوافق التنظيمي مدمجاً"
-        title="التكاملات: زاتكا ورصد"
-        tagline="الامتثال لمتطلّبات هيئة الزكاة (زاتكا) وهيئة الغذاء والدواء (رصد) ليس إضافة اختيارية في ثاني اثنين. هو جزء من البنية الأساسية للنظام، يعمل تلقائياً مع كل فاتورة وكل دفعة، بدون تدخّل يدوي وبدون أنظمة وسيطة."
+        title="التكاملات: زاتكا"
+        tagline="الامتثال لمتطلّبات هيئة الزكاة (زاتكا) ليس إضافة اختيارية في ثاني اثنين. هو جزء من البنية الأساسية للنظام، يعمل تلقائياً مع كل فاتورة، بدون تدخّل يدوي وبدون أنظمة وسيطة."
       />
 
       <div className="my-8 rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 sm:p-8">
@@ -79,67 +77,39 @@ export default function IntegrationsPage() {
 
       <Callout tone="success" title="بدون أنظمة خارجية">
         <p className="mb-0">
-          كثير من أنظمة الصيدليات تعتمد على أنظمة خارجية (وسيطة) لإرسال الفواتير
-          لزاتكا، بتكاليف اشتراك إضافية وتأخير. ثاني اثنين يتكامل مباشرة —
-          توقيع، إرسال، متابعة — كله داخل النظام.
+          كثير من أنظمة المحلّات تعتمد على أنظمة خارجية (وسيطة) لإرسال
+          الفواتير لزاتكا، بتكاليف اشتراك إضافية وتأخير. ثاني اثنين يتكامل
+          مباشرة — توقيع، إرسال، متابعة — كلّه داخل النظام.
         </p>
       </Callout>
 
-      <div className="my-10 rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-white p-6 sm:p-8">
-        <div className="mb-3 flex items-center gap-2">
-          <ScanBarcode size={18} className="text-brand-500" />
-          <span className="text-xs font-bold uppercase tracking-wider text-accent-600">
-            رصد
-          </span>
-        </div>
-        <h2 className="mb-3 text-2xl font-bold text-brand-600">
-          منصّة تتبع الأدوية (رصد)
-        </h2>
-        <p className="max-w-3xl text-[15px] leading-8 text-ink-600">
-          هيئة الغذاء والدواء تطلب تتبّع الأدوية المراقبة والحيوية خلال كل
-          مراحل سلسلة الإمداد. لأن ثاني اثنين يحفظ رقم الدفعة وGTIN لكل صنف
-          أصلاً، التكامل مع رصد يصبح تشغيلاً للبيانات الموجودة، لا إدخالاً
-          جديداً.
-        </p>
-      </div>
-
+      <h2 className="mb-3 mt-12 text-2xl font-bold text-brand-500">
+        وسائل الدفع
+      </h2>
+      <p className="mb-6 max-w-3xl text-[15px] leading-8 text-ink-500">
+        كاش، مدى، Apple Pay، STC Pay، التحويل البنكي. كل وسيلة دفع
+        يستخدمها زبائنك تنعكس في النظام بطريقتها الخاصة، بدون خلط أو
+        تسويات يدوية في آخر اليوم.
+      </p>
       <FeatureGrid
         cols={2}
         features={[
           {
-            icon: ScanBarcode,
-            title: "تسجيل الاستلام من المورّد",
-            body: "عند استلام فاتورة شراء، النظام يرسل لرصد بأن هذه الدفعات وصلت لهذه الصيدلية — مرحلة أساسية في التتبّع.",
+            icon: CreditCard,
+            title: "أكثر من وسيلة دفع في الفاتورة الواحدة",
+            body: "زبون يدفع جزءاً كاش وجزءاً بمدى؟ النظام يقبل التقسيم في نفس الفاتورة، ويسجّل كل مبلغ تحت الوسيلة الصحيحة.",
           },
           {
-            icon: Link,
-            title: "تسجيل الصرف من نقطة البيع",
-            body: "الأدوية المراقبة التي تُباع تُبلَّغ لرصد بأنها خرجت من سلسلة الإمداد، ملفاتها مكتملة تلقائياً.",
-          },
-          {
-            icon: RefreshCw,
-            title: "مزامنة التحويلات والمرتجعات",
-            body: "التحويل بين فروع، الإرجاع للمورّد، الإتلاف — كلها أحداث تصل رصد في وقتها الحقيقي.",
-          },
-          {
-            icon: ShieldCheck,
-            title: "امتثال كامل بدون جهد",
-            body: "بدل تعبئة ملفّات الإبلاغ يدوياً، يعمل التكامل في الخلفية، وتحصل على تقارير الامتثال جاهزة.",
+            icon: CircleCheck,
+            title: "تقارير اليومية للتسوية",
+            body: "تقرير لكل وسيلة دفع في نهاية الجلسة: كم مدى، كم كاش، كم STC Pay. يطابق ما تستلمه فعلياً من البنوك ومن الدرج.",
           },
         ]}
       />
 
-      <Callout tone="tip" title="لماذا التكامل مدمج وليس إضافة خارجية؟">
-        <p className="mb-0">
-          لأن رصد يحتاج تفاصيل الدفعة (رقم الدفعة، GTIN، الصلاحية) في كل بلاغ.
-          هذه البيانات موجودة في ثاني اثنين أصلاً — حيث يتتبّع الدفعات منذ
-          أول يوم. النظام لا ينشئ بيانات جديدة للتكامل، بل يستخدم ما لديه.
-        </p>
-      </Callout>
-
       <section className="my-10 rounded-2xl border border-accent-200 bg-accent-50/40 p-6 sm:p-8">
         <div className="mb-3 flex items-center gap-2">
-          <Link size={18} className="text-accent-600" />
+          <LinkIcon size={18} className="text-accent-600" />
           <span className="text-xs font-bold uppercase tracking-wider text-accent-700">
             قريباً
           </span>
